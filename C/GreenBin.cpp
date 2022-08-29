@@ -12,7 +12,6 @@ int main() {
     for (int i = 0; i < N; ++i){
         string s;
         cin >> s;
-
         // 文字列のそーと
         sort(s.begin(), s.end());
 
