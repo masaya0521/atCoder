@@ -11,7 +11,7 @@ int main() {
     for(int i=1; i<=X;i++){
         for(int j=2;j<=X;j++){
             int sov = pow(i,j);
-            if(pow(i,j) <= X) {
+            if(sov <= X) {
                 ans = max(ans,sov); 
             }
         }
