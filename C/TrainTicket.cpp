@@ -23,6 +23,7 @@ int main() {
                 string op2 = "+";
                 string op3 = "+";
                 if(i == 0){
+                    sum += b;
                 }else{
                     sum -= b;
                     op1 = "-"; 
