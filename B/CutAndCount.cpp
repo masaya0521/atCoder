@@ -1,31 +1,38 @@
 #include <iostream>
-#include <string>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-using namespace std; 
-
+#include <set>
+using namespace std;
+ 
 int main() {
-    int N;
-    cin >> N;
-
-    string S;
-    cin >> S;
-
-    string X[N];
-    string Y[N];
-    int sum = 0;
-
-    for(int i=1;i<N;i++){
-        int tmp = 0;
-        for(int j=0;j<i;j++){
-            X[j] = S[j];
-            Y[j] = S[j+i];
-        }
-        for(int j=0;j<N;j++){
-            if(X[j] == Y[j]){
-                tmp = 0;
-            }
-        }
-    }
+ 
+	int N; string S; cin >> N >> S;
+	int ans = 0;
+ 
+	for (int i = 0; i < N; i++) {
+ 
+		int cnt = 0;
+		for (char c='a'; c <= 'z'; c++) {
+ 
+			bool left = false, right = false;
+			for (int n = 0; n <= i; n++) {
+				if (S[n] == c)
+					left = true;
+			}
+ 
+			for (int m = i+1; m < N; m++) {
+				if (S[m] == c)
+					right = true;
+			}
+ 
+			cnt += (left == true && right == true);
+ 
+		}
+ 
+		ans = max(ans, cnt);
+	
+	}
+ 
+	cout << ans;
+	//while (1) {}
+	return 0;
+ 
 }
