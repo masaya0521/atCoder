@@ -7,8 +7,7 @@ int main() {
     int N, M;
     cin >> N >> M;
  
-    const int MAX_N = 1e2;
-    vector<int> A(MAX_N, 0);
+    vector<int> A(100, 0);
  
     int result = 0;
     for (int i = 0; i < N; i++) {
@@ -22,7 +21,6 @@ int main() {
         }
     }
  
-    // 全員が同じ種類の好みか算出
     for (auto a: A) {
         if (a == N) {
             result++;
