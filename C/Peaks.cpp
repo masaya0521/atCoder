@@ -8,6 +8,13 @@ int main(){
     int N, M;
     cin >> N >> M;
 
+    // 各標高の高さ
+    vector<int> H(N);
+    for(int i=0; i<N; ++i){
+        cin >> h;
+        H.push_back(h)
+    }
+
     // 頂点数Nの無向グラフを定義
     vector<vector<int> > G(N);
 
