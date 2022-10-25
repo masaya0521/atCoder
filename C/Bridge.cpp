@@ -2,15 +2,25 @@
 #include <vector>
 
 using namespace std;
+using Graph = vector<vector<int> >;
 
+void dfs(const Graph &G, int v, vector<bool> seen) {
+    seen[v] = true; // v を訪問済にする
+
+    // v から行ける各頂点 next_v について
+    for (auto next_v : G[v]) { 
+        if (seen[next_v]) continue; // next_v が探索済だったらスルー
+        dfs(G, next_v, seen); // 再帰的に探索
+    }
+}
 
 int main(){
     // 頂点数と辺数
     int N, M;
     cin >> N >> M;
 
-    // 頂点数Nの有向グラフを定義
-    vector<vector<int> > G(N);
+    // 頂点数Nの無向グラフを定義
+    Graph G(N);
 
     // M本の辺を受け取る
     for(int i = 0; i < M ; ++i){
@@ -22,6 +32,10 @@ int main(){
         G[u].push_back(v);
         G[v].push_back(u);
     }
+
+    vector<bool> seen;
+    seen.assign(M, false);
+    dfs(G, 0, seen);
 
     int bridge = 0;
     bool isBridge = false;
