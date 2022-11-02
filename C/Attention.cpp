@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     int n;
     char s[300001];
-    int sum1[300001],sum2[300001],ans=0;
+    int sum1[300001],sum2[300001],ans=1e9;
 
     cin >> n >> s+1;
 
