@@ -3,18 +3,20 @@
 
 using namespace std;
 
-int sum=1;
+int sum=0;
 int limit=100000;
 int nothing = 5;
 
-int search(vector<int> &arr, int num){
-    cout << "出力 : " << sum << endl;
+void search(vector<int> &arr, int num){
     sum++;
     if(limit < sum){
-        cout << "limit" << endl;
-        return 0;
+        cout << -1 << endl;
+        return;
     } 
-    if(num == 1) return sum;
+    if(num == 1) {
+        cout << sum << endl;
+        return;
+    }
     search(arr, arr[num]);
 }
 
@@ -29,22 +31,6 @@ int main() {
         a.push_back(num-1);
     }
 
-    int sum;
-    int num = a[0];
-
-    for(int i;i<N;i++){
-        b = a[] 
-        if(b == 2){
-            cout >> ans >> endl;
-            break;
-        }
-        if(i == N-1){
-            cout >> -1 >> endl;
-        }
-        num = a[]
-    }
-
-    int ans = search(a, a[0]);
-    cout << ans << endl;
+    search(a, a[0]);
     return 0;
 }
