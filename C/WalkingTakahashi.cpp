@@ -16,7 +16,6 @@ int main() {
     for(long long i=0;i<k;i++){
         // 正負の移動判定
         if(abs(ans+d) < abs(ans-d)){
-            if(ans < ans+d)
             ans = ans + d;
             // cout << ans << endl;
         } else {
