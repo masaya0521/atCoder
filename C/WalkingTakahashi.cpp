@@ -4,14 +4,22 @@
 
 using namespace std;
 
-bool isMovePlus(int d, int x){
-    return x + d < x - d; 
-}
-
 int main() {
     long long x, k, d;
     cin >> x >> k >> d;
 
+    x = abs(x);
+    if(x/d > k){
+        x -= k*d;
+    cout<< x <<endl;
+    return 0;
+    }
+    k -= x/d;
+    x %= d;
+    
+    if(k%2 == 1) x=abs(x-d);
+
+/*
     long long ans = x;
     for(long long i=0;i<k;i++){
         // 正負の移動判定
@@ -23,6 +31,8 @@ int main() {
             // cout << ans << endl;
         }
     }
+    */
 
-    cout << ans << endl;
+    cout << x << endl;
+    return 0;
 }
