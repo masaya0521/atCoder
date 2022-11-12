@@ -7,6 +7,12 @@ edition = "2021"
 
 [dependencies]
 
+# A問題
 [[bin]]
-name = "Trained"
-path = "src/B/Trained.rs"
+name = "abc333"
+path = "src/A/abc333.rs"
+
+# B問題
+[[bin]]
+name = "trained"
+path = "src/B/trained.rs"
