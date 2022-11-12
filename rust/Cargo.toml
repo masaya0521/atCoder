@@ -18,3 +18,8 @@ path = "src/A/abc333.rs"
 [[bin]]
 name = "trained"
 path = "src/B/trained.rs"
+
+# C問題
+[[bin]]
+name = "walking_takahashi"
+path = "src/C/walking_takahashi.rs"
