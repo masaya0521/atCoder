@@ -19,6 +19,10 @@ path = "src/A/abc333.rs"
 name = "trained"
 path = "src/B/trained.rs"
 
+[[bin]]
+name = "select"
+path = "src/B/select.rs"
+
 # C問題
 [[bin]]
 name = "walking_takahashi"
