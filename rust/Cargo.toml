@@ -27,3 +27,7 @@ path = "src/B/select.rs"
 [[bin]]
 name = "walking_takahashi"
 path = "src/C/walking_takahashi.rs"
+
+[[bin]]
+name = "minimization"
+path = "src/C/minimization.rs" 
